@@ -9,7 +9,7 @@ Beim redirect von Login zu /user Fehler mit Status-Code 403 (Forbidden)
 Das client secret wird nicht an die Request übergeben
 
 ### Lösung
-???
+Keycloak schaut, wenn es Rollen abfragt, in die Client-Roles. Der User muss also im entsprechenden Client die Rolle besitzen, damit die Authorisierung funktioniert.
 
 ## Setup
 1. Keycloak Setup:

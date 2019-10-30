@@ -42,7 +42,7 @@ public class AuthenticationConfig extends KeycloakWebSecurityConfigurerAdapter {
         super.configure(http);
         http
                 .authorizeRequests()
-                .antMatchers("/user*").hasRole("user")
+                .antMatchers("/user*").hasRole("USER")
                 .anyRequest().permitAll();
     }
 }
