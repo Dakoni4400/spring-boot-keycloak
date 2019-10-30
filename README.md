@@ -1,5 +1,16 @@
 # Springboot mit Keycloak nutzen
 
+## Known Bug
+
+### Beschreibung
+Beim redirect von Login zu /user Fehler mit Status-Code 403 (Forbidden)
+
+### Grund
+Das client secret wird nicht an die Request übergeben
+
+### Lösung
+???
+
 ## Setup
 1. Keycloak Setup:
     1. Docker container mit keycloak anlegen `docker run jboss/keycloak`
