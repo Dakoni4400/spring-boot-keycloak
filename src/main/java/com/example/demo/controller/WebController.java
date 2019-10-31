@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.websocket.OnError;
+import javax.xml.bind.PrintConversionEvent;
 import java.security.Principal;
 
 @Controller
@@ -25,7 +26,13 @@ public class WebController {
     }
 
     @GetMapping(path = "/secret")
-    public String users(Principal principal, Model model) {
+    public String secret(Principal principal, Model model) {
+        model.addAttribute("username", principal.getName());
+        return "secret";
+    }
+
+    @GetMapping(path = "/admin")
+    public String admin(Principal principal, Model model) {
         model.addAttribute("username", principal.getName());
         return "secret";
     }
