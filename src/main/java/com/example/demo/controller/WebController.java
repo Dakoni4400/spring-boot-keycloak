@@ -26,12 +26,8 @@ public class WebController {
 
     @GetMapping(path = "/secret")
     public String users(Principal principal, Model model) {
-        return "secret";
-        /*addUsers();
-        Iterable<User> users = userRepository.findAll();
-        model.addAttribute("users", users);
         model.addAttribute("username", principal.getName());
-        return "users";*/
+        return "secret";
     }
 
     @GetMapping(path = "/error")
@@ -50,28 +46,5 @@ public class WebController {
             }
         }
         return "error";
-    }
-
-    // add users for demonstration
-    public void addUsers() {
-        /*
-        User user1 = new User();
-        user1.setAddress("1111 foo blvd");
-        user1.setName("Foo Industries");
-        user1.setServiceRendered("Important services");
-        userRepository.save(user1);
-
-        User user2 = new User();
-        user2.setAddress("2222 bar street");
-        user2.setName("Bar LLP");
-        user2.setServiceRendered("Important services");
-        userRepository.save(user2);
-
-        User user3 = new User();
-        user3.setAddress("33 main street");
-        user3.setName("Big LLC");
-        user3.setServiceRendered("Important services");
-        userRepository.save(user3);
-        */
     }
 }
