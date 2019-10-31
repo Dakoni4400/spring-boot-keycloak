@@ -24,9 +24,9 @@ public class WebController {
         return "external";
     }
 
-    @GetMapping(path = "/user")
+    @GetMapping(path = "/secret")
     public String users(Principal principal, Model model) {
-        return "users";
+        return "secret";
         /*addUsers();
         Iterable<User> users = userRepository.findAll();
         model.addAttribute("users", users);
